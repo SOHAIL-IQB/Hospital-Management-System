@@ -1,4 +1,5 @@
 import express from 'express';
+import { protect, admin } from '../middlewares/auth.js';
 import {
   createHospital,
   getHospitals,
@@ -9,8 +10,12 @@ import {
 
 const router = express.Router();
 
-router.post('/create', createHospital);
+// Public routes
 router.get('/', getHospitals);
+
+// Protected admin routes
+router.use(protect, admin);
+router.post('/create', createHospital);
 router.delete('/delete', deleteHospital);
 router.put('/update', updateHospital);
 router.post('/details', addHospitalDetails);
