@@ -77,4 +77,4 @@ Future Enhancements
 	•	Appointment booking system
 	•	Dashboard with analytics
 
-This project is licensed under the MIT License. Contributions are welcome.
+
