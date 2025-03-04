@@ -25,7 +25,7 @@ The Hospital Management System is a full-stack web application designed to effic
 - Tailwind CSS for styling  
 
 ## Project Structure
-
+```
 backend/
 │── src/
 │   ├── config/              # Database connection
@@ -49,6 +49,7 @@ frontend/
 │── index.css                # Global styles
 │── package.json             # Frontend dependencies
 
+```
 
 ## Installation & Setup
 
