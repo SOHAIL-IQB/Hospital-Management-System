@@ -7,19 +7,17 @@ const api = axios.create({
   }
 });
 
-// Request interceptor
+// Request interceptor for JWT
 api.interceptors.request.use(config => {
   const token = localStorage.getItem('token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
+  if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
 export default {
   // Auth
-  login: (data) => api.post('/auth/login', data),
   register: (data) => api.post('/auth/register', data),
+  login: (data) => api.post('/auth/login', data),
   getProfile: () => api.get('/auth/me'),
 
   // Hospitals
@@ -27,5 +25,6 @@ export default {
   createHospital: (data) => api.post('/hospitals/create', data),
   updateHospital: (id, data) => api.put(`/hospitals/update?id=${id}`, data),
   deleteHospital: (id) => api.delete(`/hospitals/delete?id=${id}`),
-  getHospitalById: (id) => api.get(`/hospitals/${id}`)
+  getHospitalById: (id) => api.get(`/hospitals/${id}`),
+  addHospitalDetails: (id, data) => api.post(`/hospitals/details?id=${id}`, data)
 };
