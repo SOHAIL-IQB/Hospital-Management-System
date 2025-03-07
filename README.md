@@ -10,7 +10,7 @@ The Hospital Management System is a full-stack web application designed to effic
 - Delete hospital records  
 - Secure authentication system using JWT  
 
-## Tech Stack
+## Tech Stacks
 
 ### Backend
 - Node.js with Express.js (REST API)  
