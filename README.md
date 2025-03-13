@@ -1,7 +1,7 @@
 # Hospital Management System
 
 ## Overview
-The Hospital Management System is a full-stack web application designed to efficiently manage hospital records. It allows users to create, view, edit, and delete hospital records, including details such as name, city, specialization, and ratings
+The Hospital Management System is a full-stack web application designed to efficiently manage hospital records. It allows users to create, view, edit, and delete hospital records, including details such as name, city, specialization, and ratings.
 
 ## Features
 - Add new hospitals with images and specialties  
